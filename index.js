@@ -30,9 +30,7 @@ app.get('/', (req, res) => {
    
 })
 app.get('/movies', (req, res) => {
-    let responseText = JSON.stringify(movieList, null, 2);
-    responseText += '<small>\nRequested at: ' + req.requestTime + '</small>';
-  res.send(responseText);
+    res.json(movieList)
    
 })
 app.get('/favorites', (req, res) => {

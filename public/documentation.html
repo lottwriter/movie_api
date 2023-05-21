@@ -11,5 +11,22 @@
     <p>
         To run the application, navigate to movie_api and enter the command "node server.js"
     </p>
+    <h1>Endpoints</h1>
+    <h2>GET request type</h2>
+    <p><strong>/movies</strong> Returns a list of all movies</p>
+    <p><strong>/movies/:title</strong> Returns information about a single movie</p>
+    <p><strong>/movies/:title/genre</strong> Returns the genre and genre description of a movie</p>
+    <p><strong>/movies/:title/director</strong> Returns info of a movie's director</p>
+    <p><strong>/users/:name</strong> Returns a user by name</p>
+    <p><strong>/favorites</strong> Returns a list of movies marked as favorites</p>
+    <p><strong>/documentation</strong> Returns this information</p>
+    <h2>POST request type</h2>
+    <p><strong>/users</strong> Registers a new user</p>
+    <p><strong>/favorites</strong> Adds a movie to list of favorites</p>
+    <h2>PUT request type</h2>
+    <p><strong>/users/:name/username</strong> Updates the username of a user</p>
+    <h2>DELETE request type</h2>
+    <p><strong>/favorites/:title</strong> Deletes a movie from the list of favorites</p>
+    <p><strong>/user/:name</strong> Deletes a user</p>
 </body>
 </html>

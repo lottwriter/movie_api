@@ -1,19 +1,22 @@
 const express = require("express");
 const req = require("express/lib/request");
 const app = express();
-const fs = require('fs');
 morgan = require('morgan');
 path = require('path');
 
-const accessLogStream = fs.createWriteStream(path.join(__dirname, 'log.txt'), {flags: 'a'})
-  
+  let movieList = [
+    {title: 'Rio', year: 2011},
+    {title: 'Top Gun Maverick', year: 2022},
+    {title: 'Dunkirk', year: 2019},
+    {title: 'Kung-Fu Panda', year: 2008},
+  ]
   let requestTime = (req, res, next) => {
     req.requestTime = Date.now();
     next();
   };
 
   app.use(express.static('public'));
-  app.use(morgan('combined', {stream:accessLogStream}));
+  app.use(morgan('combined'));
   app.use(requestTime);
   app.use((err, req, res, next) => {
     console.error(err.stack);
@@ -27,7 +30,7 @@ app.get('/', (req, res) => {
    
 })
 app.get('/movies', (req, res) => {
-    let responseText = "List o' movies";
+    let responseText = JSON.stringify(movieList, null, 2);
     responseText += '<small>\nRequested at: ' + req.requestTime + '</small>';
   res.send(responseText);
    

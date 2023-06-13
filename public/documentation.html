@@ -21,12 +21,12 @@
     <p><strong>/favorites</strong> Returns a list of movies marked as favorites</p>
     <p><strong>/documentation</strong> Returns this information</p>
     <h2>POST request type</h2>
-    <p><strong>/users</strong> Registers a new user</p>
-    <p><strong>/favorites</strong> Adds a movie to list of favorites</p>
+    <p><strong>/users</strong> Registers a new user. Expects a JSON object in the request body. If successful, the JSON object is returned back to the user.</p>
+    <p><strong>/favorites</strong> Adds a movie to list of favorites. Expects a JSON object in the request body. If successful, the JSON object is returned back to the user.</p>
     <h2>PUT request type</h2>
-    <p><strong>/users/:name/username</strong> Updates the username of a user</p>
+    <p><strong>/users/:name/username</strong> Updates the username of a user. Expects a JSON object in the request body. If successful, the JSON object of the updated user info is returned.</p>
     <h2>DELETE request type</h2>
-    <p><strong>/favorites/:title</strong> Deletes a movie from the list of favorites</p>
-    <p><strong>/user/:name</strong> Deletes a user</p>
+    <p><strong>/favorites/:title</strong> Deletes a movie from the list of favorites by title. If successful, the updated JSON object of favorite movies is returned.</p>
+    <p><strong>/users/:name</strong> Deletes a user. If successful, the updated JSON object of users is returned.</p>
 </body>
 </html>

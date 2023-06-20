@@ -15,17 +15,29 @@ path = require('path');
 uuid = require('uuid');
 async function startUp() {
     // Connect to mongoose database
-    mongoose.connect("mongodb://127.0.0.1:27017/test", {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    }).then(() => {
-        // If it connects log the following
-        console.log("Connected to MongoDB database.");
-    }).catch((e) => {
-        // If it doesn't connect log the following
-        console.log("Unable to connect to MongoDB database. Error:" + e.stack);
-    });
-   ;
+//     mongoose.connect("mongodb://127.0.0.1:27017/test", {
+//         useNewUrlParser: true,
+//         useUnifiedTopology: true
+//     }).then(() => {
+//         // If it connects log the following
+//         console.log("Connected to MongoDB database.");
+//     }).catch((e) => {
+//         // If it doesn't connect log the following
+//         console.log("Unable to connect to MongoDB database. Error:" + e.stack);
+//     });
+//    ;
+// }
+mongoose.connect(process.env.CONNECTION_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}).then(() => {
+  // If it connects log the following
+  console.log("Connected to MongoDB database.");
+}).catch((e) => {
+  // If it doesn't connect log the following
+  console.log("Unable to connect to MongoDB database. Error:" + e.stack);
+});
+;
 }
 startUp();
   

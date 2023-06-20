@@ -19,8 +19,10 @@ let Users = Models.User,
           return done(null, false, { message: 'Incorrect username or password.' });
         }
   
-        // Check the password validity here and handle authentication
-        // ...
+        if (!user.validatePassword(password)) {
+          console.log('incorrect password');
+          return callback(null, false, {message: 'Incorrect password.'});
+        }        // ...
   
         console.log('finished');
         return done(null, user);

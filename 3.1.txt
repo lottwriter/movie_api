@@ -1,0 +1,8 @@
+1.
+a. Obviously, a framework will be needed here. The app has become too unstable, too difficult to maintain, due to the lack of guidelines in place. It will need to be rebuilt from the ground up, unfortunately. React would be suitable, in order to keep the code more efficient and organized.
+
+b. Due to the fact that I'll be working with tables and data, Angular would be suitable, as this particular extension to the companies app won't require super dynamic code. 
+
+c. Since this will be dealing with components, colors, fonts, and styling, a library would likely be more suitable than a framework, as I won't be dealing with overly complicated code logic, just fancy frontend work.
+
+2. Since I'll be making user interfaces on the frontend, and considering the fact that my website will need to be very dynamic, yet be able to serve a lot of data easily to the user, React would be very suitable. Things will need to constantly be updated, such as a user's favorite movies and their personal information. React excels at this.

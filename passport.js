@@ -1,3 +1,6 @@
+/*
+mongoimport --uri mongodb+srv://lottwriter:AlecAtlas1@myflixdb.mzlznai.mongodb.net/myFlixDB --collection movies --type json --file C:\Users\lottw\Downloads\movies_mongoExported.txt
+*/
 const passport = require('passport'),
   LocalStrategy = require('passport-local').Strategy,
   Models = require('./models.js'),

@@ -27,7 +27,8 @@ async function startUp() {
 //     });
 //    ;
 // }
-mongoose.connect(process.env.CONNECTION_URI, {
+mongoose.connect('mongodb+srv://lottwriter:AlecAtlas1@myflixdb.mzlznai.mongodb.net/',
+ {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => {

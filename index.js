@@ -27,7 +27,7 @@ async function startUp() {
 //     });
 //    ;
 // }
-mongoose.connect('mongodb+srv://lottwriter:AlecAtlas1@myflixdb.mzlznai.mongodb.net/', {
+mongoose.connect(process.env.CONNECTION_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => {
@@ -321,7 +321,7 @@ app.post('/users',
 });
 
 //Returns all users
-app.get('/users', (req, res) => {
+app.get('/users', passport.authenticate('jwt', { session: false }), (req, res) => {
   Users.find()
     .then((users) => {
       res.status(201).json(users);

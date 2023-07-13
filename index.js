@@ -27,7 +27,7 @@ async function startUp() {
 //     });
 //    ;
 // }
-mongoose.connect('mongodb+srv://lottwriter:AlecAtlas1@myflixdb.mzlznai.mongodb.net/',
+mongoose.connect('mongodb+srv://lottwriter:AlecAtlas1@myflixdb.mzlznai.mongodb.net/myFlixDB',
  {
   useNewUrlParser: true,
   useUnifiedTopology: true

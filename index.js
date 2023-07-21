@@ -235,7 +235,7 @@ app.get('/movies', passport.authenticate('jwt', { session: false }), (req, res) 
 
 //Returns data of a single movie by title
 app.get('/movies/:title', passport.authenticate('jwt', { session: false }), (req, res) => {
-  Movies.findOne({title: req.params.title})
+  Movies.findOne({title: req.params.Title})
   .then((movie) => {
     res.status(201).json(movie)
   })
@@ -247,7 +247,7 @@ app.get('/movies/:title', passport.authenticate('jwt', { session: false }), (req
 
 //Returns movie genre and description
 app.get('/movies/:title/genre', passport.authenticate('jwt', { session: false }), (req, res) => {
-  Movies.findOne({ title: req.params.title })
+  Movies.findOne({ title: req.params.Title })
   .then((movie) => {
   
 
